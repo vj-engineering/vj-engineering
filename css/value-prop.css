@@ -1,0 +1,113 @@
+.value-prop-section {
+    padding: 70px 40px;
+    background-color: #fff; /* Or any other background color you prefer */
+}
+
+.value-prop-container {
+    max-width: 1500px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 40px;
+}
+
+.value-prop-image {
+    flex: 1;
+    max-width: 50%; /* Adjust as needed */
+}
+
+.value-prop-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.value-prop-text-area {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for the first two items */
+    gap: 30px;
+}
+
+.value-prop-item {
+    /* Styles for individual items, if any, can go here */
+    /* For example, padding or margins if not covered by the grid gap */
+}
+
+.value-prop-item.value-prop-support {
+    grid-column: 1 / -1; /* Make the support item span both columns */
+    /* For the layout in the image, the third item is below the first two. */
+    /* To place it under the first column (Customise): */
+    /* grid-column: 1 / 2; */ 
+    /* grid-row: 2 / 3; */
+    /* To make it span the full width below the first two items: */
+    /* grid-column: 1 / -1; */
+    /* grid-row: 2 / 3; */
+    /* The image shows the support item taking the full width on a new line */
+}
+
+.value-prop-category {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff; /* Blue color for the category */
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.value-prop-headline {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.value-prop-text-area p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments for value-prop section */
+@media (max-width: 992px) {
+    .value-prop-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .value-prop-image {
+        max-width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .value-prop-text-area {
+        grid-template-columns: 1fr; /* Stack items in a single column */
+        width: 100%;
+        max-width: 600px; /* Limit width for better readability */
+    }
+
+    .value-prop-item.value-prop-support {
+        grid-column: auto; /* Reset column span for single column layout */
+        grid-row: auto; /* Reset row for single column layout */
+    }
+}
+
+@media (max-width: 768px) {
+    .value-prop-section {
+        padding: 50px 20px;
+    }
+
+    .value-prop-image {
+        max-width: 100%;
+    }
+
+    .value-prop-headline {
+        font-size: 22px;
+    }
+
+    .value-prop-text-area p {
+        font-size: 15px;
+    }
+}

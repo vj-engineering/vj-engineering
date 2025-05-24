@@ -1,0 +1,279 @@
+.features-section {
+    background-color: #f9f9f9;
+    padding: 90px 40px; /* Increased padding */
+}
+
+.cards-container {
+    max-width: 1500px; /* Increased to match hero section */
+    width: 90%; /* Match header width percentage */
+    margin: 0 auto;
+    display: flex;
+    gap: 32px; /* Increased gap between cards */
+    justify-content: center;
+}
+
+.card {
+    flex: 1;
+    /* background-color: white; */ /* Removed to allow ::before pseudo-element to be visible */
+    border-radius: 12px; /* Increased rounded corners */
+    overflow: hidden; /* Important to clip the ::before pseudo-element */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08); /* Enhanced shadow */
+    position: relative; /* Establishes a stacking context */
+    max-width: 420px; /* Larger card width */
+    min-height: 300px; /* Add a minimum height to ensure visibility if content is removed */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* background-size and background-position moved to ::before */
+}
+
+.card-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.3s ease-in-out;
+    /* z-index: -1; */ /* Removed as it might not be needed if card has no direct background */
+    background-repeat: no-repeat; /* Prevent image tiling */
+}
+
+/* Hide card content sections */
+.card-header,
+.card-body,
+.card-footer {
+    display: none; /* Hide card content sections */
+}
+
+/* New styles for industrial waste info section */
+.industrial-waste-info {
+    max-width: 1500px; /* Increased max-width to match header scale */
+    margin: 0 auto;
+    padding: 50px 10px; /* Increased padding */
+    justify-content: space-between; /* Create space between content and media */
+    width: 90%; /* Match header width percentage */
+}
+
+.industrial-waste-info h2 {
+    font-size: 42px; /* Increased font size for impact */
+    font-weight: bold;
+    color: #1a237e; /* Use primary color for heading */
+    margin-bottom: 25px; /* Adjusted margin */
+    line-height: 1.35; /* Improved line height */
+}
+
+.industrial-waste-info p {
+    font-size: 20px; /* Increased font size for readability */
+    color: #444; /* Consistent paragraph color */
+    line-height: 1.7; /* Improved line height */
+    max-width: 800px; /* Adjusted max-width for paragraph */
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.card-header {
+    padding: 30px 35px; /* Increased padding */
+    text-align: center;
+}
+
+.card-header h2 {
+    font-size: 28px; /* Larger heading */
+    margin-bottom: 10px;
+    letter-spacing: 0.5px; /* Added letter spacing */
+}
+
+.card-header p {
+    font-size: 18px; /* Larger text */
+    opacity: 0.85;
+}
+
+.card-body {
+    padding: 35px; /* Increased padding */
+    background-color: white;
+}
+
+.card-body h3 {
+    font-size: 32px; /* Larger heading */
+    margin-bottom: 30px; /* Increased margin */
+    color: #333;
+    text-align: center;
+    letter-spacing: 0.5px; /* Added letter spacing */
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px; /* Increased spacing */
+    padding-bottom: 18px; /* Increased spacing */
+    border-bottom: 1px solid #eee;
+    font-size: 18px; /* Larger text */
+}
+
+.feature-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.tick-icon {
+    color: #0a1172;
+    font-size: 24px; /* Larger icon */
+    font-weight: bold;
+    margin-right: 18px; /* Increased margin */
+    flex-shrink: 0;
+}
+
+.card-footer {
+    padding: 30px 35px; /* Increased padding */
+    background-color: white;
+    text-align: center;
+}
+
+.card-btn {
+    display: inline-block;
+    padding: 18px 34px; /* Larger button */
+    font-size: 20px; /* Larger text */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px; /* Rounded corners to match other buttons */
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-bottom: 18px; /* Increased margin */
+    cursor: pointer;
+    letter-spacing: 0.5px; /* Added letter spacing */
+}
+
+.card-btn {
+    background-color: #0a1172;
+    color: white;
+    border: none;
+}
+
+.card-btn:hover {
+    background-color: #060a4e;
+}
+
+.card-btn-dark {
+    background-color: #111;
+    color: white;
+}
+
+.card-btn-dark:hover {
+    background-color: #333;
+}
+
+.card-note {
+    font-size: 16px; /* Larger text */
+    color: #777;
+    margin-top: 5px; /* Added margin */
+}
+
+/* Responsive Design for Features Section */
+@media (max-width: 1200px) {
+    .features-section {
+        padding: 70px 30px;
+    }
+    
+    .cards-container {
+        width: 95%;
+        gap: 25px;
+    }
+    
+    .industrial-waste-info {
+        width: 95%;
+        padding: 40px 20px;
+    }
+    
+    .industrial-waste-info h2 {
+        font-size: 36px;
+    }
+    
+    .industrial-waste-info p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .card {
+        max-width: 500px;
+        width: 100%;
+    }
+    
+    .industrial-waste-info h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+    
+    .industrial-waste-info p {
+        font-size: 17px;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-section {
+        padding: 50px 20px;
+    }
+    
+    .card {
+        max-width: 100%;
+    }
+    
+    .card-image {
+        height: 400px;
+    }
+    
+    .industrial-waste-info {
+        padding: 30px 15px;
+    }
+    
+    .industrial-waste-info h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .industrial-waste-info p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-section {
+        padding: 40px 15px;
+    }
+    
+    .card-image {
+        height: 300px;
+    }
+    
+    .industrial-waste-info h2 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    
+    .industrial-waste-info p {
+        font-size: 15px;
+    }
+}

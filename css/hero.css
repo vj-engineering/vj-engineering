@@ -1,0 +1,290 @@
+.hero-section {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    max-width: 1500px; /* Increased max-width to match header scale */
+    margin: 0 auto;
+    padding: 70px 40px; /* Increased padding */
+    min-height: calc(100vh - 90px); /* Adjusted for larger header */
+    justify-content: space-between; /* Create space between content and media */
+    width: 90%; /* Match header width percentage */
+}
+
+.hero-content {
+    flex: 1; /* Standard flex value */
+    padding-right: 50px; /* Increased padding */
+    max-width: 600px; /* Limit width to avoid center drift */
+    margin-right: auto; /* Push content to the left */
+}
+
+.hero-media {
+    flex: 0.8; /* Give slightly less space to media */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align content to the right */
+    max-width: 45%; /* Ensure media doesn't take too much space */
+}
+
+.hero-content h1 {
+    font-size: 54px; /* Further increased font size */
+    font-weight: bold;
+    color: #1a237e; /* Use primary color for heading */
+    margin-bottom: 30px; /* Increased margin */
+    line-height: 1.3; /* Improved line height */
+}
+
+.hero-content p {
+    font-size: 22px; /* Further increased font size */
+    color: #444; /* Slightly darker text */
+    margin-bottom: 50px; /* Increased margin */
+    line-height: 1.6; /* Improved line height */
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 25px; /* Increased gap */
+    margin-bottom: 70px; /* Adjusted margin */
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 38px; /* Further increased padding */
+    border: 2px solid #1a237e; /* Primary color for border */
+    font-size: 20px; /* Increased font size */
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 30px; /* Match CTA button style with rounded corners */
+    letter-spacing: 0.5px; /* Subtle letter spacing like header CTA */
+}
+
+.btn-primary {
+    background-color: #1a237e; /* Primary color background */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #121858; /* Darker shade on hover */
+    border-color: #121858;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #1a237e; /* Primary color for text */
+    border: 2px solid #1a237e;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+    border-color: #1a237e;
+    color: #1a237e;
+}
+
+.icon {
+    margin-left: 8px;
+}
+
+/* Client Logo Animation */
+.client-logos-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 50px; /* Adjusted margin */
+    position: relative;
+}
+
+.client-logos {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Increased gap */
+    animation: scroll 25s linear infinite; /* Slightly slower animation */
+}
+
+.client-logos img {
+    height: 42px; /* Further increased logo size to match header scale */
+    opacity: 0.7; /* Slightly increased opacity for better visibility */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Prevent shrinking of images */
+    flex-shrink: 0;
+    margin: 0 5px; /* Added small margins */
+}
+
+.client-logos img:hover {
+    opacity: 1;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / 2));
+    }
+}
+
+/* Add these styles to create a subtle gradient fade effect at the edges */
+.client-logos-container::before,
+.client-logos-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 60px; /* Increased fade width */
+    z-index: 2;
+    pointer-events: none;
+}
+
+.client-logos-container::before {
+    left: 0;
+    background: linear-gradient(to right, white 20%, transparent); /* Adjusted gradient */
+}
+
+.client-logos-container::after {
+    right: 0;
+    background: linear-gradient(to left, white 20%, transparent); /* Adjusted gradient */
+}
+
+/* Video and Fallback Image Styles */
+.hero-media video {
+    width: 100%;
+    max-width: 550px; /* Increased max width for the video */
+    height: auto;
+    object-fit: contain; /* Ensure the video maintains aspect ratio */
+    transition: transform 0.5s ease; /* Smooth transition for hover effect */
+}
+
+.hero-media:hover video {
+    transform: scale(1.02); /* Subtle zoom effect on hover */
+}
+
+.video-fallback {
+    display: none; /* Hide fallback image by default */
+    max-width: 550px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Show fallback if video fails to load */
+video:not([poster]):not([src]) + .video-fallback,
+video:error + .video-fallback {
+    display: block;
+}
+
+/* Responsive Design for Hero Section */
+@media (max-width: 1200px) {
+    .hero-section {
+        padding: 50px 30px;
+        width: 95%;
+    }
+    
+    .hero-content h1 {
+        font-size: 48px;
+    }
+    
+    .hero-content p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 40px 20px;
+        min-height: auto;
+        text-align: center;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-right: 0;
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .hero-content h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+    
+    .hero-content p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 40px;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+    
+    .hero-media {
+        max-width: 100%;
+        justify-content: center;
+    }
+    
+    .hero-media video {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 30px 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+    
+    .client-logos img {
+        height: 32px;
+    }
+    
+    .client-logos {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    
+    .hero-content p {
+        font-size: 15px;
+    }
+    
+    .hero-buttons {
+        gap: 12px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .client-logos img {
+        height: 28px;
+    }
+}
