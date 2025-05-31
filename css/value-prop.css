@@ -37,14 +37,14 @@
 }
 
 .value-prop-item.value-prop-support {
-    grid-column: 1 / -1; /* Make the support item span both columns */
+    /* grid-column: 1 / -1; Make the support item span both columns */
     /* For the layout in the image, the third item is below the first two. */
     /* To place it under the first column (Customise): */
-    /* grid-column: 1 / 2; */ 
-    /* grid-row: 2 / 3; */
+    /* grid-column: 1 / 2; 
+    grid-row: 2 / 3; */
     /* To make it span the full width below the first two items: */
-    /* grid-column: 1 / -1; */
-    /* grid-row: 2 / 3; */
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
     /* The image shows the support item taking the full width on a new line */
 }
 

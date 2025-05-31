@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Your Unit - VJ Engineering</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/design.css"> <!-- Added design specific CSS -->
+    <!-- 🚀 Include an <model-viewer> script to handle .glb files. -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <a href="/">
+                <img src="assets/images/VJ_Engineering.png" alt="VJ Engineering Logo">
+            </a>
+        </div>
+        
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/design.html">Design</a></li> <!-- Corrected link -->
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <button class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <button class="cta-button">Speak to an Engineer</button>
+    </header>
+
+    <main>
+        <div class="design-container">
+            <section class="image-section">
+                <div class="thumbnail-gallery" id="thumbnailGallery">
+                    <!-- Thumbnail images will be loaded here by JavaScript -->
+                    <div class="thumbnail-item" data-model="assets/glbs/1.glb" data-image="assets/images/l1.png" data-description="This is the Blue Tanker model, ideal for versatile operations.">
+                        <img src="assets/images/l1.png" alt="Thumbnail 1 - Blue Tanker">
+                    </div>
+                    <div class="thumbnail-item" data-model="assets/glbs/2.glb" data-image="assets/images/l2.png" data-description="The Yellow Tanker offers robust performance for heavy-duty tasks.">
+                        <img src="assets/images/l2.png" alt="Thumbnail 2 - Yellow Tanker">
+                    </div>
+                    <div class="thumbnail-item" data-model="assets/glbs/3.glb" data-image="assets/images/l3.png" data-description="Our Gray Tanker model is designed for specialized industrial applications.">
+                        <img src="assets/images/l3.png" alt="Thumbnail 3 - Gray Tanker">
+                    </div>
+                    <div class="thumbnail-item" data-model="assets/glbs/4.glb" data-image="assets/images/l4.png" data-description="Client Logo 4 - Represents one of our valued partners. (Model 4)">
+                        <img src="assets/images/l4.png" alt="Thumbnail 4 - Model 4">
+                    </div>
+                </div>
+                <div class="main-image-view" id="mainModelView" style="background: #1a237e; border-radius: 12px; padding: 16px;">
+                    <model-viewer id="mainModel" src="" alt="Main selected model" camera-controls ar ar-modes="webxr scene-viewer quick-look" shadow-intensity="1" environment-image="neutral" style="display:none; width: 100%; height: 100%; min-height: 350px; background: #1a237e; border-radius: 8px;"></model-viewer>
+                    <span class="main-image-placeholder" id="modelPlaceholder">Select a model</span>
+                </div>
+            </section>
+
+            <section class="navigation-controls">
+                <button class="nav-button" id="backButton" >Back</button>
+                <button class="nav-button" id="nextButton" >Next</button>
+            </section>
+
+            <section class="description-area" id="descriptionArea">
+                <p>Select an image to see its description.</p>
+            </section>
+        </div>
+    </main>
+    
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/design-page.js"></script> <!-- Added JavaScript for design page interactivity -->
+</body>
+</html>
