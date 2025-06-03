@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | VJ Engineering</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="stylesheet" href="css/value-prop.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <a href="/">
+                <img src="assets/images/VJ_Engineering.png" alt="VJ Engineering Logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/products.html">Products</a></li>
+                <li><a href="/design.html">Design</a></li>
+                <li><a href="/contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <button class="cta-button">Speak to an Engineer</button>
+    </header>
+    <main>
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h1>Get In Touch</h1>
+                    <p>Whether you need a custom quote, technical consultation, or support for an existing unit, our team is here to help.</p>
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <h4>Phone</h4>
+                            <p>+44 (0) 1234 567890</p>
+                        </div>
+                        <div class="contact-card">
+                            <h4>Email</h4>
+                            <p>enquiries@vjengineering.co.uk</p>
+                        </div>
+                        <div class="contact-card">
+                            <h4>Address</h4>
+                            <p>VJ Engineering Ltd<br>Industrial Estate<br>Manchester, M1 1AA<br>United Kingdom</p>
+                        </div>
+                        <div class="contact-card">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>24/7 Emergency Support Available</p>
+                        </div>
+                        <div class="contact-card emergency">
+                            <h4>Emergency Support</h4>
+                            <p>For urgent technical support outside business hours:</p>
+                            <p class="emergency-phone">+44 (0) 7777 123496</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-area">
+                    <h1>Send Us a Message</h1>
+                    <form class="contact-form">
+                        <label for="enquiry-type">Enquiry Type</label>
+                        <select id="enquiry-type" name="enquiry-type" required>
+                            <option value="">Select enquiry type</option>
+                            <option value="quote">Quote</option>
+                            <option value="support">Support</option>
+                            <option value="consultation">Consultation</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="first-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" name="last-name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="company-name">Company Name</label>
+                            <input type="text" id="company-name" name="company-name">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Please provide details about your enquiry..." required></textarea>
+                        </div>
+                        <button type="submit" class="send-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>
