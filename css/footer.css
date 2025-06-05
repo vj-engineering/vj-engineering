@@ -1,0 +1,138 @@
+/* Footer Styles */
+.footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 40px 20px 20px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-center {
+    flex: 1;
+    text-align: center;
+    min-width: 200px;
+}
+
+.footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+}
+
+.company-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+.contact-item i {
+    width: 20px;
+    color: #3498db;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-link {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.social-link:hover {
+    background-color: #34495e;
+    transform: translateY(-2px);
+}
+
+.social-link i {
+    font-size: 1.2rem;
+    width: 20px;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #34495e;
+    text-align: center;
+    color: #bdc3c7;
+    font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: left;
+        gap: 30px;
+    }
+    
+    .footer-left {
+        min-width: auto;
+    }
+    
+    .footer-center {
+        order: -1;
+    }
+    
+    .contact-item {
+        justify-content: left;
+    }
+    
+    .company-name {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 15px 15px;
+    }
+    
+    .contact-item {
+        font-size: 0.9rem;
+    }
+    
+    .social-link {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
