@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Your Unit - VJ Engineering</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/design.css"> <!-- Added design specific CSS -->
     <link rel="stylesheet" href="css/footer.css">
@@ -40,23 +39,99 @@
     <main>
         <div class="design-container">
             <section class="image-section">
-                <div class="thumbnail-gallery" id="thumbnailGallery">
-                    <!-- Thumbnail images will be loaded here by JavaScript -->
-                    <div class="thumbnail-item" data-model="assets/glbs/1.glb" data-image="assets/images/l1.png" data-description="This is the Blue Tanker model, ideal for versatile operations.">
-                        <img src="assets/images/l1.png" alt="Thumbnail 1 - Blue Tanker">
+                <div class="options-panel" id="optionsPanel">
+                    <div class="options-section">
+                        <h3>Truck</h3>
+                        <div class="option-category">
+                            <label>Wheel</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="wheel" value="4*2"> 4*2</label>
+                                <label><input type="checkbox" name="wheel" value="6*4"> 6*4</label>
+                                <label><input type="checkbox" name="wheel" value="8*4"> 8*4</label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="thumbnail-item" data-model="assets/glbs/2.glb" data-image="assets/images/l2.png" data-description="The Yellow Tanker offers robust performance for heavy-duty tasks.">
-                        <img src="assets/images/l2.png" alt="Thumbnail 2 - Yellow Tanker">
+
+                    <div class="options-section">
+                        <h3>Tanker</h3>
+                        <div class="option-category">
+                            <label>Material</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="material" value="SS304"> SS304</label>
+                                <label><input type="checkbox" name="material" value="SS316"> SS316</label>
+                                <label><input type="checkbox" name="material" value="275J"> 275J</label>
+                            </div>
+                        </div>
+                        <div class="option-category">
+                            <label>Capacity</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="capacity" value="4000L"> 4000L</label>
+                                <label><input type="checkbox" name="capacity" value="6000L"> 6000L</label>
+                                <label><input type="checkbox" name="capacity" value="8000L"> 8000L</label>
+                            </div>
+                        </div>
+                        <div class="option-category">
+                            <label>Ancillary</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="ancillary" value="side_panel"> Side Panel</label>
+                                <label><input type="checkbox" name="ancillary" value="hose_tray"> Hose Tray</label>
+                                <label><input type="checkbox" name="ancillary" value="suction"> Suction</label>
+                                <label><input type="checkbox" name="ancillary" value="tool_box"> Tool Box</label>
+                            </div>
+                        </div>
+                        <div class="option-category">
+                            <label>Compartment</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="compartment" value="single"> Single</label>
+                                <label><input type="checkbox" name="compartment" value="water_compartment"> Water Compartment</label>
+                            </div>
+                        </div>
+                        <div class="option-category">
+                            <label>Discharge Valve</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="discharge_valve" value="1"> 1"</label>
+                                <label><input type="checkbox" name="discharge_valve" value="2"> 2"</label>
+                                <label><input type="checkbox" name="discharge_valve" value="3"> 3"</label>
+                            </div>
+                        </div>
+                        <div class="option-category">
+                            <label>Pump System</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="pump_system" value="Jurop400"> Jurop400</label>
+                                <label><input type="checkbox" name="pump_system" value="Jurop452"> Jurop452</label>
+                                <label><input type="checkbox" name="pump_system" value="customise"> Customise</label>
+                            </div>
+                        </div>
+                        <div class="option-category">
+                            <label>Painting & Coating</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="painting_coating" value="epoxy_primer"> Epoxy primer</label>
+                                <label><input type="checkbox" name="painting_coating" value="anti_corrosion_coating"> anti-corrosion coating</label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="thumbnail-item" data-model="assets/glbs/3.glb" data-image="assets/images/l3.png" data-description="Our Gray Tanker model is designed for specialized industrial applications.">
-                        <img src="assets/images/l3.png" alt="Thumbnail 3 - Gray Tanker">
-                    </div>
-                    <div class="thumbnail-item" data-model="assets/glbs/4.glb" data-image="assets/images/l4.png" data-description="Client Logo 4 - Represents one of our valued partners. (Model 4)">
-                        <img src="assets/images/l4.png" alt="Thumbnail 4 - Model 4">
+
+                    <div class="options-section">
+                        <h3>Subframe</h3>
+                        <div class="option-category">
+                            <label>Subframe Type</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="subframe_type" value="bolted"> Bolted Version</label>
+                                <label><input type="checkbox" name="subframe_type" value="welded"> Welded Version</label>
+                            </div>
+                        </div>
+                        <div class="option-category">
+                            <label>Material</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="subframe_material" value="galvanized"> galvanized</label>
+                                <label><input type="checkbox" name="subframe_material" value="mild_steel"> Mild Steel</label>
+                                <label><input type="checkbox" name="subframe_material" value="stainless_steel"> Stainless Steel</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="main-image-view" id="mainModelView" style="background: gray; border-radius: 12px; padding: 16px;">
-                    <model-viewer id="mainModel" src="" alt="Main selected model" camera-controls ar ar-modes="webxr scene-viewer quick-look" shadow-intensity="0"  environment-image="legacy" style="display:none; width: 100%; height: 100%; min-height: 350px; background: gray; border-radius: 8px;">
+                    <model-viewer id="mainModel" src="assets/glbs/1.glb" alt="Main selected model" camera-controls ar ar-modes="webxr scene-viewer quick-look" shadow-intensity="0"  environment-image="legacy" style="width: 100%; height: 100%; min-height: 350px; background: gray; border-radius: 8px;">
                         <effect-composer render-mode="quality" msaa="1024">
                             <color-grade-effect contrast="-1" saturation="-1" opacity="0" blend-mode="SKIP" brightness="-1" hue="0"></color-grade-effect>
                         </effect-composer>
@@ -94,7 +169,7 @@
             </div>
             
             <div class="footer-center">
-                <h2 class="company-name">VJ Engineering</h2>
+                <img src="assets/images/VJ_Engineering.png" alt="VJ Engineering Logo" class="footer-logo">
             </div>
             
             <div class="footer-right">

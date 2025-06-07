@@ -23,58 +23,16 @@ body {
 /* Section for image selection and display */
 .image-section {
     display: flex;
-    justify-content: space-between;
+    gap: 20px; /* Add gap between options panel and model viewer */
     width: 100%;
     margin-bottom: 25px; /* Increased margin */
     padding: 0; /* Remove padding, rely on children's padding */
     border: none; /* Remove border */
 }
 
-/* Container for the thumbnail images on the left */
-.thumbnail-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px; /* Slightly increased gap */
-    width: 45%; /* Adjusted width */
-    justify-content: flex-start; /* Align items to the start */
-    padding: 15px;
-    border: 1px solid #dee2e6; /* Softer border */
-    background-color: #ffffff;
-    border-radius: 6px; /* Rounded corners */
-    max-height: 420px; 
-    overflow-y: auto;
-}
-
-.thumbnail-item {
-    width: calc(50% - 12px); /* Adjusted for new gap */
-    height: auto;
-    border: 2px solid transparent;
-    border-radius: 4px; /* Rounded corners for thumbnails */
-    cursor: pointer;
-    transition: border-color 0.2s ease, transform 0.2s ease; /* Smoother transition */
-    overflow: hidden; /* Ensure image corners are rounded if img itself isn't */
-}
-
-.thumbnail-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    border-radius: 3px; /* Slightly rounded corners for images */
-}
-
-.thumbnail-item:hover {
-    transform: translateY(-2px); /* Subtle lift on hover */
-    border-color: #ced4da; /* Softer hover border */
-}
-.thumbnail-item.selected {
-    border-color: #007bff; /* Keep primary color for selection */
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Subtle glow for selected */
-}
-
 /* Container for the main displayed image on the right */
 .main-image-view {
-    width: 53%; /* Adjusted width */
+    width: 58%; /* Adjusted width, consider the gap */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -156,6 +114,69 @@ body {
     line-height: 1.6; /* Improved line height for readability */
 }
 
+/* NEW STYLES FOR OPTIONS PANEL */
+.options-panel {
+    width: 40%; /* Adjust width as needed */
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    height: fit-content; /* Adjust height to content */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.options-section {
+    margin-bottom: 20px;
+}
+
+.options-section:last-child {
+    margin-bottom: 0;
+}
+
+.options-section h3 {
+    font-size: 1.1em;
+    color: #343a40;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.option-category {
+    margin-bottom: 15px;
+}
+
+.option-category label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #495057;
+    font-size: 0.95em;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: row; /* Stack checkboxes vertically */
+    gap: 8px; /* Space between checkboxes */
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    display: flex; /* Align checkbox and text */
+    align-items: center;
+    font-size: 0.9em;
+    color: #495057;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #007bff; /* Modern way to color checkboxes */
+    width: 16px;
+    height: 16px;
+}
+/* END OF NEW STYLES FOR OPTIONS PANEL */
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .design-container {
@@ -167,14 +188,10 @@ body {
         align-items: center;
     }
 
-    .thumbnail-gallery,
+    .options-panel, /* Add this */
     .main-image-view {
         width: 100%; /* Full width on smaller screens */
         margin-bottom: 20px;
-    }
-
-    .thumbnail-item {
-        width: calc(33.333% - 8px); /* Adjusted for 3 items per row with new gap */
     }
 
     .navigation-controls {
@@ -187,9 +204,6 @@ body {
 }
 
 @media (max-width: 480px) {
-    .thumbnail-item {
-        width: calc(50% - 6px); /* Adjusted for 2 items per row with new gap */
-    }
     .nav-button {
         padding: 8px 15px;
         font-size: 14px;

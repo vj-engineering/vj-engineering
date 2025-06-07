@@ -1,0 +1,41 @@
+/* Track Page Styles */
+.track-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.track-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.track-image:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .track-container {
+        padding: 1rem;
+        min-height: 50vh;
+    }
+    
+    .track-image {
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .track-container {
+        padding: 0.5rem;
+    }
+}

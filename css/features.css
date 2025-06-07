@@ -207,8 +207,8 @@
     justify-content: flex-end;
     align-items: center;
     background: rgba(10, 17, 114, 0.15); /* subtle overlay */
-    opacity: 0;
-    pointer-events: none;
+    opacity: 1; /* Changed from 0 to 1 to make it always visible */
+    pointer-events: auto; /* Changed from none to auto */
     transition: opacity 0.4s ease;
     z-index: 2;
     padding-bottom: 40px;
@@ -219,8 +219,7 @@
 }
 
 .card:hover .card-overlay {
-    opacity: 1;
-    pointer-events: auto;
+    background: rgba(10, 17, 114, 0.25); /* Slightly darker on hover */
 }
 
 .card-description {
