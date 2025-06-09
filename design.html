@@ -43,11 +43,11 @@
                     <div class="options-section">
                         <h3>Truck</h3>
                         <div class="option-category">
-                            <label>Wheel</label>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox" name="wheel" value="4*2"> 4*2</label>
-                                <label><input type="checkbox" name="wheel" value="6*4"> 6*4</label>
-                                <label><input type="checkbox" name="wheel" value="8*4"> 8*4</label>
+                            <label>Axle Type</label>
+                            <div class="button-group" data-group="axle">
+                                <button class="option-button active" data-value="4*2">4*2</button>
+                                <button class="option-button" data-value="6*4">6*4</button>
+                                <button class="option-button" data-value="8*4">8*4</button>
                             </div>
                         </div>
                     </div>
@@ -56,57 +56,57 @@
                         <h3>Tanker</h3>
                         <div class="option-category">
                             <label>Material</label>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox" name="material" value="SS304"> SS304</label>
-                                <label><input type="checkbox" name="material" value="SS316"> SS316</label>
-                                <label><input type="checkbox" name="material" value="275J"> 275J</label>
+                            <div class="button-group" data-group="material">
+                                <button class="option-button active" data-value="SS304">SS304</button>
+                                <button class="option-button" data-value="SS316">SS316</button>
+                                <button class="option-button" data-value="275J">275J</button>
                             </div>
                         </div>
                         <div class="option-category">
                             <label>Capacity</label>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox" name="capacity" value="4000L"> 4000L</label>
-                                <label><input type="checkbox" name="capacity" value="6000L"> 6000L</label>
-                                <label><input type="checkbox" name="capacity" value="8000L"> 8000L</label>
+                            <div class="button-group" data-group="capacity">
+                                <button class="option-button active" data-value="4000L">4000L</button>
+                                <button class="option-button" data-value="6000L">6000L</button>
+                                <button class="option-button" data-value="8000L">8000L</button>
                             </div>
                         </div>
                         <div class="option-category">
                             <label>Ancillary</label>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox" name="ancillary" value="side_panel"> Side Panel</label>
-                                <label><input type="checkbox" name="ancillary" value="hose_tray"> Hose Tray</label>
-                                <label><input type="checkbox" name="ancillary" value="suction"> Suction</label>
-                                <label><input type="checkbox" name="ancillary" value="tool_box"> Tool Box</label>
+                            <div class="button-group" data-group="ancillary">
+                                <button class="option-button" data-value="side_panel">Side Panel</button>
+                                <button class="option-button" data-value="hose_tray">Hose Tray</button>
+                                <button class="option-button" data-value="suction">Suction</button>
+                                <button class="option-button" data-value="tool_box">Tool Box</button>
                             </div>
                         </div>
                         <div class="option-category">
                             <label>Compartment</label>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox" name="compartment" value="single"> Single</label>
-                                <label><input type="checkbox" name="compartment" value="water_compartment"> Water Compartment</label>
+                            <div class="button-group" data-group="compartment">
+                                <button class="option-button active" data-value="single">Single</button>
+                                <button class="option-button" data-value="water_compartment">Water Compartment</button>
                             </div>
                         </div>
                         <div class="option-category">
                             <label>Discharge Valve</label>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox" name="discharge_valve" value="1"> 1"</label>
-                                <label><input type="checkbox" name="discharge_valve" value="2"> 2"</label>
-                                <label><input type="checkbox" name="discharge_valve" value="3"> 3"</label>
+                            <div class="button-group" data-group="discharge_valve">
+                                <button class="option-button active" data-value="1">1"</button>
+                                <button class="option-button" data-value="2">2"</button>
+                                <button class="option-button" data-value="3">3"</button>
                             </div>
                         </div>
                         <div class="option-category">
                             <label>Pump System</label>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox" name="pump_system" value="Jurop400"> Jurop400</label>
-                                <label><input type="checkbox" name="pump_system" value="Jurop452"> Jurop452</label>
-                                <label><input type="checkbox" name="pump_system" value="customise"> Customise</label>
+                            <div class="button-group" data-group="pump_system">
+                                <button class="option-button active" data-value="Jurop400">Jurop400</button>
+                                <button class="option-button" data-value="Jurop452">Jurop452</button>
+                                <button class="option-button" data-value="customize">Customize</button>
                             </div>
                         </div>
                         <div class="option-category">
                             <label>Painting & Coating</label>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox" name="painting_coating" value="epoxy_primer"> Epoxy primer</label>
-                                <label><input type="checkbox" name="painting_coating" value="anti_corrosion_coating"> anti-corrosion coating</label>
+                            <div class="button-group" data-group="painting_coating">
+                                <button class="option-button active" data-value="epoxy_primer">Epoxy primer</button>
+                                <button class="option-button" data-value="anti_corrosion_coating">Anti-corrosion coating</button>
                             </div>
                         </div>
                     </div>
@@ -115,17 +115,17 @@
                         <h3>Subframe</h3>
                         <div class="option-category">
                             <label>Subframe Type</label>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox" name="subframe_type" value="bolted"> Bolted Version</label>
-                                <label><input type="checkbox" name="subframe_type" value="welded"> Welded Version</label>
+                            <div class="button-group" data-group="subframe_type">
+                                <button class="option-button active" data-value="bolted">Bolted Version</button>
+                                <button class="option-button" data-value="welded">Welded Version</button>
                             </div>
                         </div>
                         <div class="option-category">
                             <label>Material</label>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox" name="subframe_material" value="galvanized"> galvanized</label>
-                                <label><input type="checkbox" name="subframe_material" value="mild_steel"> Mild Steel</label>
-                                <label><input type="checkbox" name="subframe_material" value="stainless_steel"> Stainless Steel</label>
+                            <div class="button-group" data-group="subframe_material">
+                                <button class="option-button active" data-value="galvanized">Galvanized</button>
+                                <button class="option-button" data-value="mild_steel">Mild Steel</button>
+                                <button class="option-button" data-value="stainless_steel">Stainless Steel</button>
                             </div>
                         </div>
                     </div>

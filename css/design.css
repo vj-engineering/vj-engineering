@@ -41,6 +41,18 @@ body {
     padding: 15px;
     border-radius: 6px; /* Rounded corners */
     min-height: 350px; 
+    flex-grow: 1; /* Allow the model viewer to take remaining space */
+}
+
+/* Adjusted styles for the main image viewer */
+.main-image-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e9ecef; /* Light gray background for the viewer area */
+    border-radius: 12px;
+    padding: 16px;
+    min-height: 400px; /* Ensure a minimum height */
 }
 
 .main-image-view img {
@@ -114,15 +126,71 @@ body {
     line-height: 1.6; /* Improved line height for readability */
 }
 
+/* Styles for the configuration summary in the description area */
+.configuration-summary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    border: 1px solid #e0e0e0;
+}
+
+.configuration-title {
+    font-size: 1.3em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.configuration-items {
+    display: grid;
+    gap: 10px;
+}
+
+.configuration-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #f0f0f0;
+}
+
+.configuration-item:last-child {
+    border-bottom: none;
+}
+
+.config-label {
+    font-weight: 600;
+    color: #555;
+    flex-basis: 40%; /* Adjust as needed */
+}
+
+.config-value {
+    color: #222;
+    text-align: right;
+    flex-basis: 60%; /* Adjust as needed */
+}
+
+.description-placeholder {
+    color: #777;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+}
+
 /* NEW STYLES FOR OPTIONS PANEL */
 .options-panel {
     width: 40%; /* Adjust width as needed */
     padding: 20px;
     border: 1px solid #dee2e6;
     border-radius: 8px;
-    background-color: #f8f9fa;
+    background-color: #f9f9f9;
     height: fit-content; /* Adjust height to content */
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 20px; /* Add some space below the panel */
+    max-height: calc(100vh - 200px); /* Adjust based on header/footer height */
+    overflow-y: auto;
 }
 
 .options-section {
@@ -134,11 +202,12 @@ body {
 }
 
 .options-section h3 {
-    font-size: 1.1em;
-    color: #343a40;
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #e9ecef;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.2em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
 }
 
 .option-category {
@@ -147,32 +216,39 @@ body {
 
 .option-category label {
     display: block;
-    font-weight: 600;
     margin-bottom: 8px;
-    color: #495057;
-    font-size: 0.95em;
+    font-weight: bold;
+    color: #555;
 }
 
-.checkbox-group {
+.button-group {
     display: flex;
-    flex-direction: row; /* Stack checkboxes vertically */
-    gap: 8px; /* Space between checkboxes */
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    gap: 8px; /* Spacing between buttons */
 }
 
-.checkbox-group label {
-    font-weight: normal;
-    display: flex; /* Align checkbox and text */
-    align-items: center;
-    font-size: 0.9em;
-    color: #495057;
+.option-button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 20px; /* More rounded buttons */
     cursor: pointer;
+    font-size: 0.9em;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    outline: none; /* Remove default focus outline */
 }
 
-.checkbox-group input[type="checkbox"] {
-    margin-right: 8px;
-    accent-color: #007bff; /* Modern way to color checkboxes */
-    width: 16px;
-    height: 16px;
+.option-button:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+}
+
+.option-button.active {
+    background-color: #007bff; /* Primary color for active state */
+    color: white;
+    border-color: #007bff;
+    font-weight: bold;
 }
 /* END OF NEW STYLES FOR OPTIONS PANEL */
 
