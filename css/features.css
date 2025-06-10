@@ -223,20 +223,37 @@
 }
 
 .card-description {
-    color: #fff;
-    text-align: center;
-    margin-bottom: 18px;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+}
+
+.card:hover .card-description {
+    opacity: 1;
 }
 
 .card-description h3 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 20px; /* Adjust as needed */
+    margin: 5px 0;
+    position: relative; /* For bullet point positioning */
+    padding-left: 20px; /* Space for bullet point */
 }
 
-.card-description p {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+.card-description h3::before {
+    content: "\2022"; /* Bullet point character */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white; /* Or your desired bullet color */
 }
 
 /* Responsive Design for Features Section */
